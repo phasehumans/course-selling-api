@@ -12,3 +12,9 @@ export const loginSchema = z.object({
     email: z.string().email(),
     password: z.string().min(6),
 })
+
+export const createCourseSchema = z.object({
+    title: z.string(),
+    description: z.string().optional(),
+    price: z.int()
+})
