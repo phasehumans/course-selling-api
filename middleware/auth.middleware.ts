@@ -51,7 +51,7 @@ export const authMiddleware = async (req: Request, res: Response, next: NextFunc
         return res.status(401).json({
             success: false,
             message: 'invalid token',
-            error: error.message
+            error: error.message,
         })
     }
 }
@@ -60,18 +60,18 @@ export const checkRoleInstructor = async (req: Request, res: Response, next: Nex
     const role = req.role
 
     try {
-        if(role !== 'INSTRUCTOR'){
+        if (role !== 'INSTRUCTOR') {
             return res.status(400).json({
                 success: false,
-                message: "unauth"
+                message: 'unauth',
             })
         }
         next()
     } catch (error: any) {
         return res.status(500).json({
             success: false,
-            message: "internal server error",
-            error: error.message
+            message: 'internal server error',
+            error: error.message,
         })
     }
 }
@@ -83,15 +83,15 @@ export const checkRoleStudent = async (req: Request, res: Response, next: NextFu
         if (role !== 'STUDENT') {
             return res.status(400).json({
                 success: false,
-                message: "unauth"
+                message: 'unauth',
             })
         }
         next()
     } catch (error: any) {
         return res.status(500).json({
             success: false,
-            message: "internal server error",
-            error: error.message
+            message: 'internal server error',
+            error: error.message,
         })
     }
 }

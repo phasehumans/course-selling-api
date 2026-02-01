@@ -1,4 +1,3 @@
-import { password } from 'bun'
 import { z } from 'zod'
 
 export const signupSchema = z.object({
@@ -16,5 +15,11 @@ export const loginSchema = z.object({
 export const createCourseSchema = z.object({
     title: z.string(),
     description: z.string().optional(),
-    price: z.int()
+    price: z.int(),
+})
+
+export const updateCourseSchema = z.object({
+    title: z.string().optional(),
+    description: z.string().optional(),
+    price: z.int().optional(),
 })
