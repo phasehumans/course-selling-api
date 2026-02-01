@@ -1,8 +1,10 @@
 import { Router } from 'express'
+import { authMiddleware, checkRoleInstructor,} from '../middleware/auth.middleware'
 
 const courseRouter = Router()
 
-courseRouter.post('/')
+courseRouter.use(authMiddleware)
+courseRouter.post('/', checkRoleInstructor,  )
 courseRouter.get('/')
 courseRouter.get('/:id')
 courseRouter.patch('/:id')
