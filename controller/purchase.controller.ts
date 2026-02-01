@@ -1,6 +1,5 @@
 import type { Request, Response } from 'express'
 import { purchaseCourseSchema } from '../utils/validation'
-import { success } from 'zod'
 import { prisma } from '../db'
 
 export const purchaseCourse = async (req: Request, res: Response) => {

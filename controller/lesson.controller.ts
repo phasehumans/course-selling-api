@@ -1,8 +1,6 @@
 import type { Request, Response } from 'express'
 import { createLessonSchema } from '../utils/validation'
-import { success } from 'zod'
 import { prisma } from '../db'
-import { id } from 'zod/locales'
 
 export const addLesson = async (req: Request, res: Response) => {
     const parseData = createLessonSchema.safeParse(req.body)
