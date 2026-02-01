@@ -40,10 +40,3 @@ course-selling-api/
 ├── tsconfig.json
 └── prisma.config.ts
 ```
-
-## Setup
-
-```bash
-bun install
-bun run dev
-```
