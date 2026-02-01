@@ -23,3 +23,10 @@ export const updateCourseSchema = z.object({
     description: z.string().optional(),
     price: z.int().optional(),
 })
+
+export const createLessonSchema = z.object({
+    title: z.string(),
+    content: z.string(),
+    courseId: z.string()
+})
+
