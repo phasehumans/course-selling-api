@@ -1,6 +1,6 @@
-import { Router } from "express";
-import { authMiddleware, checkRoleInstructor } from "../middleware/auth.middleware";
-import { addLesson, getLesson } from "../controller/lesson.controller";
+import { Router } from 'express'
+import { authMiddleware, checkRoleInstructor } from '../middleware/auth.middleware'
+import { addLesson, getLesson } from '../controller/lesson.controller'
 
 const lessonRouter = Router()
 
